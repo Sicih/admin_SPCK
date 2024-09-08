@@ -76,8 +76,18 @@ body {
     text-decoration: underline;
 }
 
-#SignUp {
+#LogIn {
+    display: inline-block;
     text-decoration: none;
     color: black;
     margin-right: 340px;
+}
+
+.check {
+    display: flex;
+    margin-bottom: 30px;
+}
+
+#class {
+    display:none;
 }

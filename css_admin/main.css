@@ -1,0 +1,323 @@
+body {
+    background-color: #f0f0f0;
+}
+
+.heading {
+    width: 100%;
+    margin: auto;
+    font-family: Tahoma, sans-serif;
+    display: flex;
+    padding: 0;
+    border-bottom: 1px;
+    border-color: black;
+    border-style: solid;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.heading h1::after{
+    content: "";
+    position: absolute;
+    width: 100%;
+    height: 4px;
+    display: block;
+    margin: 0 auto;
+    background-color: #4caf50;
+}
+
+.heading p:hover {
+    cursor: pointer;
+}
+
+.heading p {
+    font-size: 20px;
+    padding: 35px;
+    padding: 16px;
+    margin-bottom: 20px;
+}
+
+.tab {
+    margin-right: 550px;
+    margin-top: -10px;
+    display: flex;
+}
+
+.tab p {
+    width: 100px;
+    padding-top: 35px;
+    padding-bottom: 0;
+}
+
+.announcement p {
+    color: rgb(46, 143, 181);
+}
+
+#grip {
+    margin-left: 15px;
+    font-size: 30px;
+}
+
+#grip:hover {
+    cursor: pointer;
+}
+
+.tintuc h2 {
+    margin-top: 15px;
+    margin-bottom: 10px;
+    color: #6390ca;
+    font-weight: bold;
+    text-decoration: none;
+    text-align: left;
+    line-height: 29px;
+    font-family: Tahoma;
+}
+
+
+.thongtin p {
+    line-height: 25px;
+    font-size: medium;
+    font-family: Tahoma;
+    margin-left: 30px;
+    margin-right: 30px;
+    width: 100%;
+}
+
+.tintuc {
+    padding-left: 30px;
+    margin-left: 10px;
+    margin-right: 10px;
+    display: flex;
+    flex-direction: column;
+}
+
+.thongtin {
+    flex-direction: row;
+    display: flex;
+}
+
+.hot {
+    margin-top: 20px;
+    margin-left: 30px;
+    margin-right: 30px;
+    display: flex;
+    flex-direction: column;
+    border-bottom: 2px;
+    border-color: rgb(229, 59, 59);
+    border-style: solid;
+}
+
+.hot p {
+    font-weight: bold;
+    position: static;
+    border-radius: 0px;
+    color: RED;
+    font-size: 25px;
+    margin-bottom: 5px;
+}
+
+.bao img{
+    width: 200px;
+    height: auto;
+}
+
+.tin {
+    margin-bottom: 25px;
+    margin-top: 20px;
+    margin-left: 30px;
+    margin-right: 30px;
+    display: flex;
+    flex-direction: column;
+    border-bottom: 2px;
+    border-color: rgb(229, 59, 59);
+    border-style: solid;
+}
+
+.tin p {
+    font-weight: bold;
+    position: static;
+    border-radius: 0px;
+    color: RED;
+    font-size: 19px;
+    margin-bottom: 5px;
+}
+
+.bao {
+    margin-left: 40px;
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction: row;
+    align-content: flex-start;
+}
+
+.bao h2 {
+    margin-top: 15px;
+    margin-bottom: 10px;
+    color: #6390ca;
+    font-weight: bold;
+    text-decoration: none;
+    text-align: left;
+    line-height: 29px;
+    font-family: Tahoma;
+}
+
+.chung {
+    width: 1450px;
+    padding-bottom: 30px;
+    border-bottom: 1px;
+    border-color: lightgrey;
+    border-style: solid;
+    margin-bottom: 30px;
+    display: flex;
+}
+
+.chung h2 {
+    margin-top: -5px;
+    margin-left: 30px;
+}
+
+
+/* Tổng thể */
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #f4f4f4;
+}
+
+/* Container chính */
+.container {
+    width: 80%;
+    margin: auto;
+    overflow: hidden;
+}
+
+h1 {
+    text-align: center;
+    color: #333;
+    margin-bottom: 20px;
+}
+
+/* Bảng hiển thị */
+table {
+    width: 100%;
+    border-collapse: collapse;
+    margin-bottom: 20px;
+    background-color: white;
+}
+
+table, th, td {
+    border: 1px solid #ddd;
+    padding: 12px;
+    text-align: center;
+}
+
+th {
+    background-color: #4CAF50;
+    color: white;
+}
+
+tr:nth-child(even) {
+    background-color: #f2f2f2;
+}
+
+td img {
+    max-width: 100px;
+    height: auto;
+    object-fit: cover;
+}
+
+.delete-btn {
+    background-color: #f44336;
+    color: white;
+    padding: 8px 12px;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+}
+
+.delete-btn:hover {
+    background-color: #d32f2f;
+}
+
+/* Nút thêm bài báo */
+.add-btn {
+    display: block;
+    margin: 20px 0;
+    padding: 10px 20px;
+    background-color: #4CAF50;
+    color: white;
+    border: none;
+    cursor: pointer;
+    text-align: center;
+    border-radius: 5px;
+    font-size: 16px;
+}
+
+.add-btn:hover {
+    background-color: #45a049;
+}
+
+/* Popup */
+.popup {
+    display: none;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.7);
+    justify-content: center;
+    align-items: center;
+}
+
+.popup-content {
+    background-color: white;
+    padding: 30px;
+    border-radius: 10px;
+    width: 400px;
+    position: relative;
+}
+
+.close {
+    position: absolute;
+    top: 10px;
+    right: 10px;
+    font-size: 24px;
+    cursor: pointer;
+}
+
+.close:hover {
+    color: red;
+}
+
+form label {
+    display: block;
+    margin-bottom: 8px;
+}
+
+form input[type="text"],
+form textarea {
+    width: 100%;
+    padding: 8px;
+    margin-bottom: 15px;
+    border: 1px solid #ddd;
+    border-radius: 4px;
+}
+
+form input[type="file"] {
+    border: none;
+}
+
+.submit-btn {
+    width: 100%;
+    padding: 10px;
+    background-color: #4CAF50;
+    color: white;
+    border: none;
+    cursor: pointer;
+    border-radius: 5px;
+}
+
+.submit-btn:hover {
+    background-color: #45a049;
+}

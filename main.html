@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<meta charset="UTF-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+		<title>Student Login</title>
+		<link rel="stylesheet" href="./css_admin/main.css" />
+		<link
+			rel="stylesheet"
+			href="https://cdnjs.cloudflare.com/ajax/libs/meyer-reset/2.0/reset.min.css"
+		/>
+		<link
+			rel="stylesheet"
+			href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css"
+			integrity="sha512-SnH5WK+bZxgPHs44uWIX+LLJAJ9/2PkPKZ5QiAj6Ta86w+fsb2TkcmfRyVX3pBnMFcV7oQPJkl9QevSCWr3W6A=="
+			crossorigin="anonymous"
+			referrerpolicy="no-referrer"
+		/>
+	</head>
+	<body>
+		<div class="heading">
+			<i class="fa-solid fa-grip-lines" id="grip"></i>
+			<div class="tab">
+				<p>Điểm số</p>
+				<div class="announcement">
+					<p>Thông báo</p>
+				</div>
+				<p>Tin nhắn</p>
+			</div>
+		</div>
+
+		<div class="container">
+			<h1>Quản lý bài báo</h1>
+
+
+			<button id="addArticleBtn" class="add-btn">Thêm Bài Báo</button>
+
+
+			<table id="articleTable">
+				<thead>
+					<tr>
+						<th>STT</th>
+						<th>Nội Dung</th>
+						<th>Chủ Đề</th>
+						<th>Ảnh</th>
+						<th>Thao tác</th>
+					</tr>
+				</thead>
+				<tbody>
+
+				</tbody>
+			</table>
+
+			<div id="addArticlePopup" class="popup">
+				<div class="popup-content">
+					<span class="close">&times;</span>
+					<h2>Thêm bài báo mới</h2>
+					<form id="addArticleForm">
+						<label for="title">Chủ Đề:</label>
+						<input type="text" id="title" required /><br /><br />
+
+						<label for="content">Nội Dung:</label>
+						<textarea id="content" required></textarea><br /><br />
+
+						<label for="image">Ảnh:</label>
+						<input
+							type="file"
+							id="image"
+							accept="image/*"
+							required
+						/><br /><br />
+
+
+						<img
+							id="imagePreview"
+							src="#"
+							alt="Image Preview"
+							style="display: none; width: 100px; height: auto"
+						/><br /><br />
+
+						<button type="submit" class="submit-btn">Đăng Bài</button>
+					</form>
+				</div>
+			</div>
+		</div>
+
+		<script src="./js/main.js"></script>
+	</body>
+</html>

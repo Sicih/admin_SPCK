@@ -1,0 +1,128 @@
+.heading {
+	width: 100%;
+	margin: auto;
+	font-family: Tahoma, sans-serif;
+	display: flex;
+	padding: 0;
+	border-bottom: 1px;
+	border-color: black;
+	border-style: solid;
+	align-items: center;
+	justify-content: space-between;
+}
+
+.heading h1::after {
+	content: "";
+	position: absolute;
+	width: 100%;
+	height: 4px;
+	display: block;
+	margin: 0 auto;
+	background-color: #4caf50;
+}
+
+.heading p:hover {
+	cursor: pointer;
+}
+
+.heading p {
+	font-size: 20px;
+	padding: 35px;
+	padding: 16px;
+	margin-bottom: 20px;
+}
+
+.tab {
+	margin-right: 570px;
+	margin-top: -10px;
+	display: flex;
+}
+
+.tab p {
+	width: 100px;
+	padding-top: 35px;
+	padding-bottom: 0;
+}
+
+.score p {
+	color: rgb(46, 143, 181);
+}
+
+#grip {
+	margin-left: 15px;
+	font-size: 30px;
+}
+
+#grip:hover {
+	cursor: pointer;
+}
+
+.semester {
+	font-family: Tahoma, sans-serif;
+	margin-top: 50px;
+	margin-bottom: 40px;
+	display: flex;
+	justify-content: center;
+}
+
+.semester1 {
+	border-radius: 15px;
+	padding: 10px;
+	box-shadow: rgba(99, 99, 99, 0.2) 0px 2px 8px 0px;
+	font-size: 20px;
+	margin-right: 20px;
+}
+
+.semester1:hover {
+	cursor: pointer;
+	background-color: lightcyan;
+}
+
+.semester2 {
+	border-radius: 15px;
+	padding: 10px;
+	box-shadow: rgba(99, 99, 99, 0.2) 0px 2px 8px 0px;
+	font-size: 20px;
+	margin-left: 20px;
+}
+
+.semester2:hover {
+	cursor: pointer;
+	background-color: lightcyan;
+}
+
+table {
+	width: 100%;
+	border-collapse: collapse;
+	margin: 20px 0;
+}
+
+table th,
+table td {
+	border: 1px solid #dddddd;
+	text-align: center;
+	padding: 10px;
+}
+
+table th {
+	background-color: #21b1f9;
+	color: white;
+}
+
+
+table tr:nth-child(even) {
+	background-color: #dbdbdb92;
+}
+
+table tr:nth-child(odd) {
+	background-color: #ffffff;
+}
+
+table tr:hover {
+	background-color: #c4abb7;
+}
+
+.scoreboard {
+	margin: 0 auto;
+	width: 80%;
+}

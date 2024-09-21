@@ -18,9 +18,23 @@
 		/>
 	</head>
 	<body>
-		<div class="login-container">
-			<h1>Sign Up</h1>
-			<form>
+		<div class="heading">
+			<i
+				class="fa-regular fa-circle-user"
+				id="grip"
+				onclick="location.href = 'signup.html'"
+			></i>
+			<div class="tab">
+				<p onclick="location.href = 'score.html'">Điểm số</p>	
+				<p onclick="location.href = 'main.html'">Thông báo</p>
+				<p id="maintenanceMessage">Tin nhắn</p>
+
+			</div>
+		</div>
+
+		<div class="signup-container">
+			<h1>Student Sign up</h1>
+			<form id="signup-form">
 				<input
 					type="text"
 					id="username"
@@ -43,7 +57,7 @@
 					required
 				/>
 				<input
-					type="text"
+					type="email"
 					id="email"
 					name="email"
 					placeholder="Email"
@@ -63,15 +77,12 @@
 					placeholder="Password"
 					required
 				/>
-				<div class="check">
-					<input type="checkbox" id="myCheck" onclick="myFunction()" />
-					Student
-				</div>
-				<a href="#LogIn" id="LogIn" onclick="location.href = 'index.html'"
-					>Log in</a
-				>
-				<button type="button" onclick="SignUp()" id="button">Sign Up</button>
+				<button type="button" id="signup-button">Sign up</button>
 			</form>
+		</div>
+
+		<div id="overlay" class="overlay">
+			<div class="loading-message">Vui lòng chờ...</div>
 		</div>
 
 		<script src="./js/signup.js"></script>

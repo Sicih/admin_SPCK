@@ -155,3 +155,7 @@ document.addEventListener("DOMContentLoaded", function() {
 
     loadArticles();
 });
+
+document.getElementById("maintenanceMessage").onclick = function() {
+    alert("Trang đang được bảo trì. Xin vui lòng quay lại sau!");
+};

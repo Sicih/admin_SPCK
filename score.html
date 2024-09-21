@@ -19,22 +19,27 @@
 	</head>
 	<body>
 		<div class="heading">
-			<i class="fa-solid fa-grip-lines" id="grip"></i>
+			<i
+				class="fa-regular fa-circle-user"
+				id="grip"
+				onclick="location.href = 'signup.html'"
+			></i>
 			<div class="tab">
 				<div class="score">
-					<p>Điểm số</p>
+					<p onclick="location.href = 'score.html'">Điểm số</p>
 				</div>
-				<p>Thông báo</p>
-				<p>Tin nhắn</p>
+				<p onclick="location.href = 'main.html'">Thông báo</p>
+				<p id="maintenanceMessage">Tin nhắn</p>
+
 			</div>
 		</div>
 
-		<div class="semester">
-			<div class="semester1">Học kỳ 1</div>
-			<div class="semester2">Học kỳ 2</div>
+		<div class="semester" id="semester">
+			<div class="semester1" onclick="loadSemester('k1')">Học kỳ 1</div>
+			<div class="semester2" onclick="loadSemester('k2')">Học kỳ 2</div>
 		</div>
 
-		<table class="scoreboard">
+		<table class="scoreboard" id="scoreboard">
 			<thead>
 				<tr>
 					<th>Môn học</th>
@@ -43,14 +48,65 @@
 					<th>Điểm 1 tiết</th>
 					<th>Học kỳ</th>
 					<th>TBM</th>
+					<th>Chỉnh sửa</th>
 				</tr>
 			</thead>
-			<tbody class="SubjectScore">
+			<tbody class="scoreTableBody" id="scoreTableBody">
 				
 			</tbody>
 		</table>
 
+		<div id="editPopup" class="popup" style="display: none">
+			<div class="popup-content">
+				<h3>Chỉnh sửa điểm</h3>
+				<label for="edit-oralScore">Điểm miệng:</label>
+				<input type="number" id="edit-oralScore" />
+				<label for="edit-shortTestScore">Điểm 15 phút:</label>
+				<input type="number" id="edit-shortTestScore" />
+				<label for="edit-longTestScore">Điểm 1 tiết:</label>
+				<input type="number" id="edit-longTestScore" />
+				<label for="edit-semesterScore">Điểm học kỳ:</label>
+				<input type="number" id="edit-semesterScore" />
+				<button id="saveButton">Lưu</button>
+				<button id="cancelButton" onclick="closePopup()">Hủy</button>
+			</div>
+		</div>
 
+		<div
+			class="table_component"
+			role="region"
+			tabindex="0"
+			id="table_component"
+		>
+			<table>
+				<caption>
+					<p>Danh sách học sinh</p>
+				</caption>
+				<thead>
+					<tr>
+						<th>STT</th>
+						<th>FULLNAME</th>
+						<th>USERNAME</th>
+						<th>Ngày Sinh</th>
+						<th>Email</th>
+						<th>Lớp</th>
+						<th>Mật Khẩu</th>
+						<th>id</th>
+						<th>Thao tác</th>
+					</tr>
+				</thead>
+				<tbody id="tableBody">
+					<tr>
+						<td></td>
+						<td></td>
+						<td></td>
+						<td></td>
+						<td></td>
+						<td></td>
+					</tr>
+				</tbody>
+			</table>
+		</div>
 
 		<script src="./js/score.js"></script>
 	</body>

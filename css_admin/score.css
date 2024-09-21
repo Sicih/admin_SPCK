@@ -1,61 +1,66 @@
 .heading {
-	width: 100%;
-	margin: auto;
-	font-family: Tahoma, sans-serif;
-	display: flex;
-	padding: 0;
-	border-bottom: 1px;
-	border-color: black;
-	border-style: solid;
-	align-items: center;
-	justify-content: space-between;
+    width: 100%;
+    margin: auto;
+    font-family: Tahoma, sans-serif;
+    display: flex;
+    padding: 0;
+    border-bottom: 1px;
+    border-color: black;
+    border-style: solid;
+    align-items: center;
+    justify-content: space-between;
 }
 
-.heading h1::after {
-	content: "";
-	position: absolute;
-	width: 100%;
-	height: 4px;
-	display: block;
-	margin: 0 auto;
-	background-color: #4caf50;
+.heading h1::after{
+    content: "";
+    position: absolute;
+    width: 100%;
+    height: 4px;
+    display: block;
+    margin: 0 auto;
+    background-color: #4caf50;
 }
 
 .heading p:hover {
-	cursor: pointer;
+    cursor: pointer;
 }
 
 .heading p {
-	font-size: 20px;
-	padding: 35px;
-	padding: 16px;
-	margin-bottom: 20px;
+    font-size: 20px;
+    padding: 35px;
+    padding: 16px;
+    margin-bottom: 20px;
 }
 
 .tab {
-	margin-right: 570px;
-	margin-top: -10px;
-	display: flex;
+    margin-right: 550px;
+    margin-top: -10px;
+    display: flex;
 }
 
 .tab p {
-	width: 100px;
-	padding-top: 35px;
-	padding-bottom: 0;
+    width: 100px;
+    padding-top: 35px;
+    padding-bottom: 0;
 }
 
 .score p {
 	color: rgb(46, 143, 181);
 }
 
+.announcement p {
+    color: rgb(46, 143, 181);
+}
+
 #grip {
-	margin-left: 15px;
-	font-size: 30px;
+    margin-left: 15px;
+    font-size: 30px;
 }
 
 #grip:hover {
-	cursor: pointer;
+    cursor: pointer;
 }
+
 
 .semester {
 	font-family: Tahoma, sans-serif;
@@ -125,4 +130,257 @@ table tr:hover {
 .scoreboard {
 	margin: 0 auto;
 	width: 80%;
+}
+
+
+* {
+	padding: 0;
+	margin: 0;
+	list-style: none;
+	text-decoration: none;
+  }
+  
+  body {
+	font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif;
+	padding: 25px;
+  }
+  
+  .popup-container {
+	display: inline-block;
+  }
+  
+  .popup-container .popup-button {
+	background: #333;
+	line-height: 34px;
+	color: #fff;
+	padding: 0 20px;
+	border-radius: 3px;
+	display: block;
+	cursor: pointer;
+  }
+  
+  .popup-container .popup-button:hover {
+	background: #444;
+  }
+  
+  .popup-container .popup {
+	position: fixed;
+	top: 0;
+	left: 0;
+	width: 100%;
+	height: 100%;
+	background: rgba(0, 0, 0, 0.7);
+	z-index: 10;
+	opacity: 0;
+	visibility: hidden;
+	transition: all 250ms;
+  }
+  
+  .popup-container .popup .popup-inner {
+	width: 400px;
+	box-sizing: border-box;
+	padding: 20px;
+	background: #fff;
+	position: absolute;
+	left: 50%;
+	transform: translate(-50%, -50%);
+	top: 150%;
+	transition: all 250ms;
+  }
+  
+  .popup-container .popup .popup-inner .popup-title {
+	display: flex;
+	justify-content: space-between;
+	align-items: center;
+	margin-bottom: 20px;
+  }
+  
+  .popup-container .popup .popup-inner .popup-title h6 {
+	font-size: 18px;
+	font-weight: 500;
+  }
+  
+  .popup-container .popup .popup-inner .popup-title .popup-close-btn {
+	cursor: pointer;
+	background: #eee;
+	display: block;
+	line-height: 30px;
+	padding: 0 15px;
+	font-size: 14px;
+	color: #222;
+	border-radius: 3px;
+  }
+  
+  .popup-container .popup .popup-inner .popup-content ul {
+	list-style: none;
+  }
+  
+  .popup-container .popup .popup-inner .popup-content ul li {
+	margin-bottom: 10px;
+  }
+  
+  .popup-container .popup .popup-inner .popup-content ul li:last-child {
+	margin-bottom: 0;
+  }
+  
+  .popup-container .popup .popup-inner .popup-content ul li input {
+	width: 100%;
+	border: 1px solid #ddd;
+	border-radius: 3px;
+	line-height: 34px;
+	padding: 0 15px;
+	font-size: 14px;
+	box-sizing: border-box;
+  }
+  
+  .popup-container .popup .popup-inner .popup-content ul li button {
+	width: 100%;
+	line-height: 34px;
+	background: #666;
+	color: #fff;
+	cursor: pointer;
+	border-radius: 3px;
+	border: none;
+	font-size: 14px;
+  }
+  
+  .popup-container .popup .popup-inner .popup-content ul li button:hover {
+	background: #444;
+  }
+  
+  .popup-container .popup .transparent-label {
+	position: fixed;
+	top: 0;
+	left: 0;
+	width: 100%;
+	height: 100%;
+	z-index: -1;
+	cursor: pointer;
+  }
+  
+  .popup-container > input {
+	display: none;
+  }
+  
+  .popup-container > input:checked + .popup {
+	opacity: 1;
+	visibility: visible;
+  }
+  
+  .popup-container > input:checked + .popup .popup-inner {
+	top: 50%;
+  }
+  
+  .table_component {
+	margin-top: 30px;
+	overflow: auto;
+	width: 100%;
+  }
+  
+  .table_component table {
+	border: 1px solid #dededf;
+	height: 100%;
+	width: 100%;
+	table-layout: auto;
+	border-collapse: collapse;
+	border-spacing: 1px;
+	text-align: center;
+  }
+  
+  .table_component caption {
+	margin-bottom: 10px;
+	font-size: 20px;
+	caption-side: top;
+	text-align: center;
+  }
+  
+  .table_component th {
+	border: 1px solid #dededf;
+	background-color: #94d4ff;
+	color: #000000;
+	padding: 5px;
+  }
+  
+  .table_component td {
+	border: 1px solid #dededf;
+	background-color: #ffffff;
+	color: #000000;
+	padding: 5px;
+  }
+  
+  .thaotac {
+	width: 10%;
+  }
+  
+  .thaotac:hover {
+	cursor: pointer;
+  }
+
+
+  .popup {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.7);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    z-index: 1000;
+}
+
+.popup-content {
+    background-color: #ffffff;
+    padding: 30px;
+    border-radius: 12px;
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.3);
+    width: 350px;
+    text-align: center;
+    position: relative; /* Thêm vị trí tương đối */
+    transform: translate(-50%, -50%); /* Di chuyển về giữa */
+    top: 50%; /* Đặt ở giữa theo chiều dọc */
+    left: 50%; /* Đặt ở giữa theo chiều ngang */
+}
+
+
+.popup-content h3 {
+    margin-bottom: 20px; /* Khoảng cách giữa tiêu đề và form */
+    color: #333; /* Màu sắc tiêu đề */
+}
+
+.popup-content label {
+    display: block; /* Để label nằm riêng biệt */
+    margin: 10px 0 5px; /* Khoảng cách trên, dưới */
+    font-weight: bold; /* Đậm hơn một chút */
+    color: #555; /* Màu sắc nhạt hơn */
+}
+
+.popup-content input {
+    width: 90%; /* Thay đổi kích thước */
+    margin-bottom: 15px;
+    padding: 10px; /* Tăng padding */
+    border: 1px solid #ddd; /* Đường viền nhẹ */
+    border-radius: 5px; /* Bo tròn góc nhẹ */
+    transition: border 0.3s; /* Hiệu ứng khi hover */
+}
+
+.popup-content input:focus {
+    border-color: #007BFF; /* Đổi màu đường viền khi focus */
+    outline: none; /* Ẩn outline */
+}
+
+.popup-content button {
+    background-color: #007BFF; /* Màu nền cho nút */
+    color: #ffffff; /* Màu chữ */
+    border: none; /* Ẩn đường viền */
+    border-radius: 5px; /* Bo tròn góc */
+    padding: 10px 15px; /* Padding cho nút */
+    cursor: pointer; /* Con trỏ tay */
+    transition: background-color 0.3s; /* Hiệu ứng khi hover */
+    margin: 5px; /* Khoảng cách giữa các nút */
+}
+
+.popup-content button:hover {
+    background-color: #0056b3; /* Tối màu khi hover */
 }
